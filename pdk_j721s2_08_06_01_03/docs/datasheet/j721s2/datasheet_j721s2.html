@@ -1,0 +1,1345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. J721S2 Datasheet &mdash; Platform Development Kit (PDK) - J721S2 Datasheet</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Platform Development Kit (PDK) - J721S2 Datasheet" href="index.html"/>
+        <link rel="prev" title="Platform Development Kit (PDK) - J721S2 Datasheet" href="index_j721s2.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index_j721s2.html" class="icon icon-home"> Platform Development Kit (PDK) - J721S2 Datasheet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                08_06_01
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. J721S2 Datasheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-details">1.1.1. Setup Details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#software-performance-numbers">1.1.2. Software Performance Numbers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vhwa">1.1.2.1. VHWA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dss">1.1.2.2. DSS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#udma">1.1.2.3. UDMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ospi">1.1.2.4. OSPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cpsw-2g">1.1.2.5. CPSW_2G</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sbl-ospi-boot-performance-app">1.1.2.6. SBL OSPI Boot Performance App</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index_j721s2.html">Platform Development Kit (PDK) - J721S2 Datasheet</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index_j721s2.html">Docs</a> &raquo;</li>
+      
+    <li>1. J721S2 Datasheet</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="j721s2-datasheet">
+<h1>1. J721S2 Datasheet<a class="headerlink" href="#j721s2-datasheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>1.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This section provides the performance numbers of device drivers supported in PDK</p>
+<div class="section" id="setup-details">
+<h3>1.1.1. Setup Details<a class="headerlink" href="#setup-details" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="56%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SOC Details</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Core</td>
+<td>R5F</td>
+</tr>
+<tr class="row-odd"><td>Core Operating Speed</td>
+<td>1GHz</td>
+</tr>
+<tr class="row-even"><td>DDR Speed</td>
+<td>4266 MTs</td>
+</tr>
+<tr class="row-odd"><td>VPAC Frequency</td>
+<td>650 MHz</td>
+</tr>
+<tr class="row-even"><td>DMPAC Frequency</td>
+<td>520 MHz</td>
+</tr>
+<tr class="row-odd"><td>Cache status</td>
+<td>Enabled</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Optimization Details</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Profile</td>
+<td>Release</td>
+</tr>
+<tr class="row-odd"><td>Compile Options for R5F</td>
+<td>-g -ms -DMAKEFILE_BUILD -c -qq -pdsw225 –endian=little -mv7R5 –abi=eabi
+-eo.oer5f -ea.ser5f –symdebug:dwarf –embed_inline_assembly
+–float_support=vfpv3d16 –emit_warnings_as_errors</td>
+</tr>
+<tr class="row-even"><td>Linker Options for R5F</td>
+<td>–emit_warnings_as_errors -w -q -u _c_int00 -c -mv7R5 –diag_suppress=10063
+-x –zero_init=on</td>
+</tr>
+<tr class="row-odd"><td>Code Placement</td>
+<td>DDR</td>
+</tr>
+<tr class="row-even"><td>Data Placement</td>
+<td>DDR</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="software-performance-numbers">
+<h3>1.1.2. Software Performance Numbers<a class="headerlink" href="#software-performance-numbers" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="vhwa">
+<h4>1.1.2.1. VHWA<a class="headerlink" href="#vhwa" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="59%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">VHWA Driver</th>
+<th class="head">Configuration</th>
+<th class="head">Measured Throughput (MPix/S)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DOF</td>
+<td>2MP (2048x1024), 12b Packed, 6 Levels,  SR191x96</td>
+<td>143.38</td>
+</tr>
+<tr class="row-odd"><td>DOF</td>
+<td>1MP (1312x736), 12b Packed, 5 Levels, SR170x124</td>
+<td>134.37</td>
+</tr>
+<tr class="row-even"><td>MSC</td>
+<td>1080P, 8b YUV420, 10 Scales output</td>
+<td>674.60</td>
+</tr>
+<tr class="row-odd"><td>NF</td>
+<td>720P, 8b YUV420, Bilateral filter</td>
+<td>678.21</td>
+</tr>
+<tr class="row-even"><td>SDE</td>
+<td>2MP (2048x1024), 12b Packed, SR 192, LR Enabled</td>
+<td>77.75</td>
+</tr>
+<tr class="row-odd"><td>SDE</td>
+<td>720P, 12b Packed, SR 192, LR Disabled</td>
+<td>91.33</td>
+</tr>
+<tr class="row-even"><td>LDC</td>
+<td>1080P, 8b YUV420, Single region</td>
+<td>700.50</td>
+</tr>
+<tr class="row-odd"><td>VISS</td>
+<td>1080P, Raw 12 input, 2 frame Merge, YUV420 12b and 8b output</td>
+<td>662.84</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dss">
+<h4>1.1.2.2. DSS<a class="headerlink" href="#dss" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="44%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Display Type</th>
+<th class="head">Configuration</th>
+<th class="head">CPU Load</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DP</td>
+<td>1080P60 BGRA32</td>
+<td>1.0% (MCU2_0)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="udma">
+<h4>1.1.2.3. UDMA<a class="headerlink" href="#udma" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="dma-parameters">
+<h5>1.1.2.3.1. DMA Parameters<a class="headerlink" href="#dma-parameters" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li>Ring Order ID: 0</li>
+<li>Channel Order ID: 0</li>
+<li>Channel DMA Priority: 1</li>
+<li>Channel Bus Priority: 4</li>
+<li>Channel BUS QOS: 4</li>
+<li>Channel TX FIFO depth: 128</li>
+<li>Channel Fetch Word Size: 16</li>
+<li>Channel Burst Size: 64 bytes for normal channel, 128 bytes for HC and UHC channels</li>
+</ul>
+</div>
+<div class="section" id="test-parameters">
+<h5>1.1.2.3.2. Test Parameters<a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li>Type: TR15 Block copy</li>
+<li>TR: one TR per TRPD in PBR mode</li>
+<li>TR Memory: Same as buffer memory (DDR, MSMC or OCMC depends on the test performed)</li>
+<li>Transfer Size: 1 MB read and 1MB write</li>
+<li>1MB means 1000x1000 bytes and 1KB means 1000 bytes</li>
+</ul>
+<p><strong>Note:</strong>
+Throughput numbers mentioned is the combined memory throughput of both read and write operations</p>
+</div>
+<div class="section" id="dru-blockcopy">
+<h5>1.1.2.3.3. DRU Blockcopy<a class="headerlink" href="#dru-blockcopy" title="Permalink to this headline">¶</a></h5>
+<p>DRU channel performance with TR submitted through ring</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test Description</th>
+<th class="head">Throughput (MCU2)</th>
+<th class="head">CPU Load (MCU2)</th>
+<th class="head">Throughput (C7x_1)</th>
+<th class="head">CPU Load (C7x_1)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[PDK-3501] 1CH DDR 1MB to DDR 1MB</td>
+<td>14563 MB/sec</td>
+<td>5%</td>
+<td>14655 MB/sec</td>
+<td>9%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3502] 1CH MSMC 1KB Circular to DDR 1MB</td>
+<td>36535 MB/sec</td>
+<td>7%</td>
+<td>32214 MB/sec</td>
+<td>12%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3503] 1CH DDR 1MB to MSMC circular 1KB</td>
+<td>25637 MB/sec</td>
+<td>6%</td>
+<td>24049 MB/sec</td>
+<td>11%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3504] 1CH MSMC 1KB to MSMC circular 1KB (1MB per TR)</td>
+<td>55924 MB/sec</td>
+<td>7%</td>
+<td>41859 MB/sec</td>
+<td>11%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3505] Multi CH DDR 1MB to DDR 1MB</td>
+<td>20540 MB/sec (2CH)</td>
+<td>11%</td>
+<td>14533 MB/sec (2CH)</td>
+<td>19%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3506] Multi CH MSMC 1KB to MSMC circular 1KB (1 MB per TR)</td>
+<td>59918 MB/sec (2CH)</td>
+<td>31%</td>
+<td>19368 MB/sec (2CH)</td>
+<td>17%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="main-navss-blockcopy-normal-channel">
+<h5>1.1.2.3.4. Main NAVSS Blockcopy (Normal Channel)<a class="headerlink" href="#main-navss-blockcopy-normal-channel" title="Permalink to this headline">¶</a></h5>
+<p>Main NAVSS normal channel performance with TR submitted through ring</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="15%" />
+<col width="12%" />
+<col width="15%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test Description</th>
+<th class="head">Throughput (MCU2/3)</th>
+<th class="head">CPU Load (MCU2/3)</th>
+<th class="head">Throughput (C7x_1)</th>
+<th class="head">CPU Load (C7x_1)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[PDK-3485]1CH DDR 1MB to DDR 1MB</td>
+<td>916 MB/sec</td>
+<td>1%</td>
+<td>924 MB/sec</td>
+<td>1%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3486] 1CH MSMC 1KB Circular to DDR 1MB</td>
+<td>1816 MB/sec</td>
+<td>2%</td>
+<td>1799 MB/sec</td>
+<td>2%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3487] 1CH DDR 1MB to MSMC circular 1KB</td>
+<td>1046 MB/sec</td>
+<td>1%</td>
+<td>1089 MB/sec</td>
+<td>1%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3488] 1CH MSMC 1KB to MSMC circular 1KB (1MB per TR)</td>
+<td>1842 MB/sec</td>
+<td>1%</td>
+<td>1826 MB/sec</td>
+<td>2%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3494] Multi CH DDR 1MB to DDR 1MB</td>
+<td>3341 MB/sec (4CH)</td>
+<td>4%</td>
+<td>1688 MB/sec (2CH)</td>
+<td>2%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3496] Multi CH MSMC 1KB to MSMC circular 1KB (1 MB per TR)</td>
+<td>7451 MB/sec (4CH)</td>
+<td>7%</td>
+<td>3138 MB/sec (2CH)</td>
+<td>1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mcu-navss-blockcopy-normal-channel">
+<h5>1.1.2.3.5. MCU NAVSS Blockcopy (Normal Channel)<a class="headerlink" href="#mcu-navss-blockcopy-normal-channel" title="Permalink to this headline">¶</a></h5>
+<p>MCU NAVSS normal channel performance with TR submitted through ring</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="67%" />
+<col width="18%" />
+<col width="15%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test Description</th>
+<th class="head">Throughput (MCU1)</th>
+<th class="head">CPU Load (MCU1)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[PDK-3490] 1CH DDR 1MB to DDR 1MB</td>
+<td>588 MB/sec</td>
+<td>1%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3491] 1CH MSMC 1KB Circular to DDR 1MB</td>
+<td>870 MB/sec</td>
+<td>1%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3492] 1CH DDR 1MB to MSMC circular 1KB</td>
+<td>646 MB/sec</td>
+<td>1%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3493] 1CH MSMC 1KB to MSMC circular 1KB (1MB per TR)</td>
+<td>892 MB/sec</td>
+<td>1%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3489] 1CH OCMC 1KB to OCMC circular 1KB (1MB per TR)</td>
+<td>2485 MB/sec</td>
+<td>2%</td>
+</tr>
+<tr class="row-odd"><td>[PDK-3495] Multi CH DDR 1MB to DDR 1MB</td>
+<td>1135 MB/sec (2CH)</td>
+<td>1%</td>
+</tr>
+<tr class="row-even"><td>[PDK-3497] Multi CH MSMC 1KB to MSMC circular 1KB (1 MB per TR)</td>
+<td>1680 MB/sec (2CH)</td>
+<td>2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="ospi">
+<h4>1.1.2.4. OSPI<a class="headerlink" href="#ospi" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="ospi-memory-non-cached-test-set-up">
+<h5>1.1.2.4.1. OSPI Memory Non Cached Test Set-up<a class="headerlink" href="#ospi-memory-non-cached-test-set-up" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li>Platform: J721S2 EVM.</li>
+<li>OS Type: Baremetal/FreeRTOS.</li>
+<li>Core : R5F_0 at 1 GHz, A72_0 at 2 GHz.</li>
+<li>Software/Application Used: OSPI_Flash_TestApp/OSPI_Flash_Dma_TestApp/OSPI_Baremetal_Flash_TestApp/OSPI_Baremetal_Flash_Dma_TestApp</li>
+<li>System Configuration: Cache OFF, Read/Write Buffer in DDR. DMA Enabled/Disabled, Interrupts ON.</li>
+</ul>
+</div>
+<div class="section" id="ospi-read-write-performance-ddr-octal-mode">
+<h5>1.1.2.4.2. OSPI Read/Write Performance (DDR Octal Mode)<a class="headerlink" href="#ospi-read-write-performance-ddr-octal-mode" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="6%" />
+<col width="8%" />
+<col width="17%" />
+<col width="15%" />
+<col width="16%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">OSPI RCLK</th>
+<th class="head">OS</th>
+<th class="head">CPU</th>
+<th class="head">Mode</th>
+<th class="head">Write Tput (MB/s)</th>
+<th class="head">Write CPU Load</th>
+<th class="head">Read Tput (MB/s)</th>
+<th class="head">Read CPU Load</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="9">133 MHz</td>
+<td rowspan="6">Baremetal</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>7.302</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>263.250</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>INDAC</td>
+<td>0.532</td>
+<td>&nbsp;</td>
+<td>23.583</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">A72_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>3.579</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>265.529</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>INDAC</td>
+<td>0.547</td>
+<td>&nbsp;</td>
+<td>12.921</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td rowspan="3">RTOS</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>7.402</td>
+<td>51%</td>
+</tr>
+<tr class="row-odd"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>262.669</td>
+<td>1%</td>
+</tr>
+<tr class="row-even"><td>INDAC</td>
+<td>0.546</td>
+<td>100%</td>
+<td>23.696</td>
+<td>51%</td>
+</tr>
+<tr class="row-odd"><td rowspan="9">166 MHz</td>
+<td rowspan="6">Baremetal</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8.500</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>328.875</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>INDAC</td>
+<td>0.532</td>
+<td>&nbsp;</td>
+<td>24.00</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td rowspan="3">A72_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5.331</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>330.781</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>INDAC</td>
+<td>0.546</td>
+<td>&nbsp;</td>
+<td>12.921</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">RTOS</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8.569</td>
+<td>51%</td>
+</tr>
+<tr class="row-even"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>326.455</td>
+<td>1%</td>
+</tr>
+<tr class="row-odd"><td>INDAC</td>
+<td>0.546</td>
+<td>100%</td>
+<td>23.869</td>
+<td>51%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ospi-memory-cached-test-set-up">
+<h5>1.1.2.4.3. OSPI Memory Cached Test Set-up<a class="headerlink" href="#ospi-memory-cached-test-set-up" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li>Platform: J721S2 EVM.</li>
+<li>OS Type: Baremetal/FreeRTOS.</li>
+<li>Core : R5F_0 at 1 GHz, A72_0 at 2 GHz.</li>
+<li>Software/Application Used: OSPI_Flash_Cache_TestApp/OSPI_Flash_Dma_Cache_TestApp/OSPI_Baremetal_Flash_Cache_TestApp/OSPI_Baremetal_Flash_Dma_Cache_TestApp</li>
+<li>System Configuration: Cache ON, Read/Write Buffer in DDR. DMA Enabled/Disabled, Interrupts ON.</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h5>1.1.2.4.4. OSPI Read/Write Performance (DDR Octal Mode)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="6%" />
+<col width="8%" />
+<col width="17%" />
+<col width="15%" />
+<col width="16%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">OSPI RCLK</th>
+<th class="head">OS</th>
+<th class="head">CPU</th>
+<th class="head">Mode</th>
+<th class="head">Write Tput (MB/s)</th>
+<th class="head">Write CPU Load</th>
+<th class="head">Read Tput (MB/s)</th>
+<th class="head">Read CPU Load</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="6">133 MHz</td>
+<td rowspan="3">Baremetal</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>81.625</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>263.75</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>INDAC</td>
+<td>0.532</td>
+<td>&nbsp;</td>
+<td>23.875</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">RTOS</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>64.404</td>
+<td>51%</td>
+</tr>
+<tr class="row-even"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>262.472</td>
+<td>1%</td>
+</tr>
+<tr class="row-odd"><td>INDAC</td>
+<td>0.543</td>
+<td>100%</td>
+<td>23.531</td>
+<td>51%</td>
+</tr>
+<tr class="row-even"><td rowspan="6">166 MHz</td>
+<td rowspan="3">Baremetal</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>93.125</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>328.75</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>INDAC</td>
+<td>0.532</td>
+<td>&nbsp;</td>
+<td>23.875</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">RTOS</td>
+<td rowspan="3">R5F_0</td>
+<td>DAC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>69.844</td>
+<td>51%</td>
+</tr>
+<tr class="row-even"><td>DAC DMA</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>326.151</td>
+<td>2%</td>
+</tr>
+<tr class="row-odd"><td>INDAC</td>
+<td>0.543</td>
+<td>100%</td>
+<td>23.504</td>
+<td>51%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="cpsw-2g">
+<h4>1.1.2.5. CPSW_2G<a class="headerlink" href="#cpsw-2g" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="test-setup">
+<h5>1.1.2.5.1. Test Setup<a class="headerlink" href="#test-setup" title="Permalink to this headline">¶</a></h5>
+<img alt="_images/enet_j721s2_cpsw2g_test_setup.png" src="_images/enet_j721s2_cpsw2g_test_setup.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Hardware Configuration</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Processing Core</td>
+<td>Main R5F0 Core 0</td>
+</tr>
+<tr class="row-odd"><td>Core Frequency</td>
+<td>1 GHz</td>
+</tr>
+<tr class="row-even"><td>Ethernet Interface Type</td>
+<td>RGMII at 1Gbps</td>
+</tr>
+<tr class="row-odd"><td>Packet buffer memory</td>
+<td>DDR</td>
+</tr>
+<tr class="row-even"><td>Hardware checksum offload</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>Scatter-gather TX</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>Scatter-gather RX</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Software Configuration</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RTOS</td>
+<td>FreeRTOS</td>
+</tr>
+<tr class="row-odd"><td>RTOS application</td>
+<td>Enet LLD lwIP example</td>
+</tr>
+<tr class="row-even"><td>TCP/IP stack</td>
+<td>lwIP 2.1.2</td>
+</tr>
+<tr class="row-odd"><td>Host PC tool version</td>
+<td>iperf v2.0.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tcp-performance">
+<h5>1.1.2.5.2. TCP Performance<a class="headerlink" href="#tcp-performance" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="main-cpsw2g-main-domain-r5-0-core-0-mcu2-0">
+<h6>1.1.2.5.2.1. Main CPSW2G - Main domain R5_0 core 0 (mcu2_0)<a class="headerlink" href="#main-cpsw2g-main-domain-r5-0-core-0-mcu2-0" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li>Main domain R5_0 at 1GHz</li>
+<li>RGMII interface at 1Gbps</li>
+<li>TCP window size: 128 KByte</li>
+</ul>
+<p class="rubric">Single Direction Test</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="55%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test</th>
+<th class="head">Measured Throughput (Mbps)</th>
+<th class="head">CPU Load (%)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TCP RX</td>
+<td>131.0</td>
+<td>53</td>
+</tr>
+<tr class="row-odd"><td>TCP TX</td>
+<td>187.0</td>
+<td>86</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Bidirectional Test</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="55%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test</th>
+<th class="head">Measured Throughput (Mbps)</th>
+<th class="head">CPU Load (%)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TCP RX</td>
+<td>105.0</td>
+<td rowspan="2">99</td>
+</tr>
+<tr class="row-odd"><td>TCP TX</td>
+<td>139.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cpsw2g-mcu-domain-r5-core-0-mcu1-0">
+<h6>1.1.2.5.2.2. CPSW2G - MCU domain R5 core 0 (mcu1_0)<a class="headerlink" href="#cpsw2g-mcu-domain-r5-core-0-mcu1-0" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li>MCU domain R5_0 at 1GHz</li>
+<li>RGMII interface at 1Gbps</li>
+<li>TCP window size: 128 KByte</li>
+</ul>
+<p class="rubric">Single Direction Test</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="55%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test</th>
+<th class="head">Measured Throughput (Mbps)</th>
+<th class="head">CPU Load (%)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TCP RX</td>
+<td>127.0</td>
+<td>70</td>
+</tr>
+<tr class="row-odd"><td>TCP TX</td>
+<td>139.0</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="28%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Test</th>
+<th class="head">Bandwidth
+(Mbps)</th>
+<th class="head">CPU Load
+(%)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TCP RX</td>
+<td>123</td>
+<td>38</td>
+</tr>
+<tr class="row-odd"><td>TCP TX</td>
+<td>186</td>
+<td>62</td>
+</tr>
+<tr class="row-even"><td>TCP Bidirectional</td>
+<td>RX=137
+TX=176</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>Host PC commands:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">iperf</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">evm_ip</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span>
+<span class="n">iperf</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">evm_ip</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="udp-performance">
+<h5>1.1.2.5.3. UDP Performance<a class="headerlink" href="#udp-performance" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="9%" />
+<col width="6%" />
+<col width="7%" />
+<col width="9%" />
+<col width="6%" />
+<col width="7%" />
+<col width="9%" />
+<col width="6%" />
+<col width="7%" />
+<col width="9%" />
+<col width="6%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" rowspan="2">Test</th>
+<th class="head" colspan="3">Datagram Length = 64B</th>
+<th class="head" colspan="3">Datagram Length = 256B</th>
+<th class="head" colspan="3">Datagram Length = 512B</th>
+<th class="head" colspan="3">Datagram Length = 1470B</th>
+</tr>
+<tr class="row-even"><th class="head"><div class="first last line-block">
+<div class="line">Bandwidth</div>
+<div class="line">(Mbps)</div>
+<div class="line"><br /></div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">CPU</div>
+<div class="line">Load</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Packet</div>
+<div class="line">Loss</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Bandwidth</div>
+<div class="line">(Mbps)</div>
+<div class="line"><br /></div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">CPU</div>
+<div class="line">Load</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Packet</div>
+<div class="line">Loss</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Bandwidth</div>
+<div class="line">(Mbps)</div>
+<div class="line"><br /></div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">CPU</div>
+<div class="line">Load</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Packet</div>
+<div class="line">Loss</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Bandwidth</div>
+<div class="line">(Mbps)</div>
+<div class="line"><br /></div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">CPU</div>
+<div class="line">Load</div>
+<div class="line">(%)</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Packet</div>
+<div class="line">Loss</div>
+<div class="line">(%)</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="3">UDP RX</td>
+<td>5.24</td>
+<td>18</td>
+<td>0.0</td>
+<td>26.2</td>
+<td>32</td>
+<td>0.0</td>
+<td>26.2</td>
+<td>21</td>
+<td>0.0</td>
+<td>26.2</td>
+<td>13</td>
+<td>0.0</td>
+</tr>
+<tr class="row-even"><td>10.5</td>
+<td>29</td>
+<td>0.0</td>
+<td>52.4</td>
+<td>59</td>
+<td>0.031</td>
+<td>52.4</td>
+<td>35</td>
+<td>0.0</td>
+<td>52.4</td>
+<td>20</td>
+<td>0.0</td>
+</tr>
+<tr class="row-odd"><td>15.7</td>
+<td>41</td>
+<td>0.0</td>
+<td>105</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>105</td>
+<td>66</td>
+<td>0.077</td>
+<td>105</td>
+<td>35</td>
+<td>0.0</td>
+</tr>
+<tr class="row-even"><td>UDP RX (Max)</td>
+<td>38.8</td>
+<td>100</td>
+<td>0.019</td>
+<td>83.9</td>
+<td>100</td>
+<td>0.028</td>
+<td>157</td>
+<td>100</td>
+<td>0.0089</td>
+<td>320</td>
+<td>100</td>
+<td>0.0019</td>
+</tr>
+<tr class="row-odd"><td>UDP TX (Max)</td>
+<td>44.9</td>
+<td>100</td>
+<td>0.0737</td>
+<td>110</td>
+<td>100</td>
+<td>0.0408</td>
+<td>220</td>
+<td>100</td>
+<td>0.03273</td>
+<td>614</td>
+<td>100</td>
+<td>0.0505</td>
+</tr>
+</tbody>
+</table>
+<p>Host PC commands:</p>
+<ul>
+<li><p class="first">Test with datagram length of 64B:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">iperf</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">evm_ip</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">l64</span> <span class="o">-</span><span class="n">b</span><span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span>
+<span class="n">where</span> <span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="n">is</span> <span class="mi">5</span><span class="n">M</span><span class="p">,</span> <span class="mi">10</span><span class="n">M</span><span class="p">,</span> <span class="mi">15</span><span class="n">M</span><span class="p">,</span> <span class="n">etc</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test with datagram length of 256B:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">iperf</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">evm_ip</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">l256</span> <span class="o">-</span><span class="n">b</span><span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span>
+<span class="n">where</span> <span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="n">is</span> <span class="mi">25</span><span class="n">M</span><span class="p">,</span> <span class="mi">50</span><span class="n">M</span><span class="p">,</span> <span class="mi">100</span><span class="n">M</span><span class="p">,</span> <span class="n">etc</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test with datagram length of 512B:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">iperf</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">evm_ip</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">l512</span> <span class="o">-</span><span class="n">b</span><span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span>
+<span class="n">where</span> <span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="n">is</span> <span class="mi">25</span><span class="n">M</span><span class="p">,</span> <span class="mi">50</span><span class="n">M</span><span class="p">,</span> <span class="mi">100</span><span class="n">M</span><span class="p">,</span> <span class="n">etc</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test with datagram length of 1470B (max):</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">iperf</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">evm_ip</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">b</span><span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span>
+<span class="n">where</span> <span class="o">&lt;</span><span class="n">bw</span><span class="o">&gt;</span> <span class="n">is</span> <span class="mi">25</span><span class="n">M</span><span class="p">,</span> <span class="mi">50</span><span class="n">M</span><span class="p">,</span> <span class="mi">100</span><span class="n">M</span><span class="p">,</span> <span class="n">etc</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="sbl-ospi-boot-performance-app">
+<h4>1.1.2.6. SBL OSPI Boot Performance App<a class="headerlink" href="#sbl-ospi-boot-performance-app" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="test-set-up">
+<h5>1.1.2.6.1. Test Set-up<a class="headerlink" href="#test-set-up" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li>Platform: J721S2 EVM.</li>
+<li>OS Type: Baremetal</li>
+<li>Core : R5F_0 at 1 GHz</li>
+<li>Software/Application Used: sbl_cust_img (with custom flags) and sbl_boot_perf_test appimage</li>
+</ul>
+</div>
+<div class="section" id="gp-evm-performance">
+<h5>1.1.2.6.2. GP EVM Performance<a class="headerlink" href="#gp-evm-performance" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="docutils">
+<colgroup>
+<col width="79%" />
+<col width="21%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>SBL Boot Time Breakdown</td>
+<td>Time (ms)</td>
+</tr>
+<tr class="row-even"><td>MCU_PORZ_OUT to MCU_RESETSTATz</td>
+<td>0.63</td>
+</tr>
+<tr class="row-odd"><td>ROM : init + SBL load from OSPI</td>
+<td>7.526</td>
+</tr>
+<tr class="row-even"><td>SBL : SBL_SciClientInit: ReadSysfwImage</td>
+<td>0.052</td>
+</tr>
+<tr class="row-odd"><td>Load/Start SYSFW</td>
+<td>4.042</td>
+</tr>
+<tr class="row-even"><td>Sciclient_init</td>
+<td>3.152</td>
+</tr>
+<tr class="row-odd"><td>Board Config</td>
+<td>1.848</td>
+</tr>
+<tr class="row-even"><td>PM Config</td>
+<td>0.386</td>
+</tr>
+<tr class="row-odd"><td>Security Config</td>
+<td>0.156</td>
+</tr>
+<tr class="row-even"><td>RM Config</td>
+<td>0.377</td>
+</tr>
+<tr class="row-odd"><td>SBL: SoC Late-Init</td>
+<td>0.00</td>
+</tr>
+<tr class="row-even"><td>SBL : Board_init (pinmux)</td>
+<td>2.476</td>
+</tr>
+<tr class="row-odd"><td>SBL : Board_init (PLL)</td>
+<td>1.138</td>
+</tr>
+<tr class="row-even"><td>SBL: Board_init (CLOCKS)</td>
+<td>1.084</td>
+</tr>
+<tr class="row-odd"><td>SBL: OSPI init</td>
+<td>0.143</td>
+</tr>
+<tr class="row-even"><td>SBL: App copy to MCU SRAM &amp; Jump to App</td>
+<td>2.314</td>
+</tr>
+<tr class="row-odd"><td>Misc</td>
+<td>0.001</td>
+</tr>
+<tr class="row-even"><td>MCUSW: CAN response</td>
+<td>1.00</td>
+</tr>
+<tr class="row-odd"><td>TOTAL time</td>
+<td>26.325</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index_j721s2.html" class="btn btn-neutral" title="Platform Development Kit (PDK) - J721S2 Datasheet" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'08_06_01',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+Platform Development Kit (PDK) - J721S2 Datasheet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+   :caption: Table of Contents
+
+   datasheet_j721s2
+
++--------------------------------+--------------------------------------------------------------------------------------------------+
+| .. Image:: ../images/e2e.jpg   | For technical support please post your questions at `http://e2e.ti.com <http://e2e.ti.com/>`__.  |
++--------------------------------+--------------------------------------------------------------------------------------------------+

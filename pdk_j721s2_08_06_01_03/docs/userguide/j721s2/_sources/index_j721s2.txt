@@ -1,0 +1,20 @@
+.. include:: index_header.rst.inc
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Table of Contents
+
+   overview
+   family_cfg/j721s2/index_release_notes_j721s2
+   getting_started
+   ccs_setup_j721s2
+   family_cfg/j721s2/index_modules_j721s2
+   family_cfg/j721s2/index_boot_j721s2
+   family_cfg/j721s2/index_board_j721s2
+   family_cfg/j721s2/index_howto_j721s2
+   family_cfg/j721s2/index_faq_j721s2
+   family_cfg/j721s2/index_developer_notes_j721s2
+
+.. include:: family_cfg/j721s2/dummy_ref_j721s2.rst.inc
+.. include:: index_support.rst.inc

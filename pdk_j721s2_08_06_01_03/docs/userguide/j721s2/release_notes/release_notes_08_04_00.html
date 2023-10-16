@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.3. Release Notes - 08_04_00 &mdash; Platform Development Kit (PDK) - J721S2 User Guide</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Platform Development Kit (PDK) - J721S2 User Guide" href="../index.html"/>
+        <link rel="up" title="2. Release Notes" href="../family_cfg/j721s2/index_release_notes_j721s2.html"/>
+        <link rel="next" title="2.4. Release Notes - 08_00_04" href="release_notes_08_00_04.html"/>
+        <link rel="prev" title="2.2. Release Notes - 08_05_00" href="release_notes_08_05_00.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index_j721s2.html" class="icon icon-home"> Platform Development Kit (PDK) - J721S2 User Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                08_06_01
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../family_cfg/j721s2/index_release_notes_j721s2.html">2. Release Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="release_notes_08_06_00.html">2.1. Release Notes - 08_06_00</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes_08_05_00.html">2.2. Release Notes - 08_05_00</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.3. Release Notes - 08_04_00</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">2.3.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-s-new">2.3.2. What&#8217;s New</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upgrade-and-compatibility">2.3.3. Upgrade and Compatibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sbl">2.3.3.1. SBL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spi">2.3.3.2. SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freertos">2.3.3.3. FreeRTOS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#device-support">2.3.4. Device Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validation-information">2.3.5. Validation Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tool-chain-information">2.3.6. Tool Chain Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-request">2.3.7. Change Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-issues">2.3.8. Fixed Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#known-issues">2.3.9. Known Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#limitations">2.3.10. Limitations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pdk">2.3.10.1. PDK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enet">2.3.10.2. ENET</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes_08_00_04.html">2.4. Release Notes - 08_00_04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes_08_00_03.html">2.5. Release Notes - 08_00_03</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">3. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ccs_setup_j721s2.html">4. CCS Setup for J721S2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../family_cfg/j721s2/index_modules_j721s2.html">5. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../family_cfg/j721s2/index_boot_j721s2.html">6. Bootloader (SBL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../family_cfg/j721s2/index_board_j721s2.html">7. Board/EVM Abstraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../family_cfg/j721s2/index_howto_j721s2.html">8. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../family_cfg/j721s2/index_faq_j721s2.html">9. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../family_cfg/j721s2/index_developer_notes_j721s2.html">10. Developer Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index_j721s2.html">Platform Development Kit (PDK) - J721S2 User Guide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index_j721s2.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../family_cfg/j721s2/index_release_notes_j721s2.html">2. Release Notes</a> &raquo;</li>
+      
+    <li>2.3. Release Notes - 08_04_00</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="release-notes-08-04-00">
+<h1>2.3. Release Notes - 08_04_00<a class="headerlink" href="#release-notes-08-04-00" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>2.3.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This release notes provides important information that will assist you in using the PDK software package for the Jacinto family of devices.
+This document provides the product information and known issues that are specific to the PDK software package.</p>
+<p>New features added / supported is listed below and defects fixed are highlighted in <strong>Fixed Issues</strong>. Also please check <strong>Upgrade and Compatibility</strong> for backward compatibility</p>
+</div>
+<div class="section" id="what-s-new">
+<h2>2.3.2. What&#8217;s New<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="upgrade-and-compatibility">
+<h2>2.3.3. Upgrade and Compatibility<a class="headerlink" href="#upgrade-and-compatibility" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sbl">
+<h3>2.3.3.1. SBL<a class="headerlink" href="#sbl" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>We have modified the CPU IDs for all cores due to an increase in the number of cores in latest Jacinto device.
+E.g. CPU Id of mcu1_0 has been updated from 4 to 8.</li>
+<li>Hence user needs to generate the new app image with the current release to use the latest SBL.</li>
+<li>CPU IDs corresponding to each core can be found here: &lt;pdk_base&gt;/packages/ti/build/makerules/platform.mk.</li>
+</ul>
+</div>
+<div class="section" id="spi">
+<h3>2.3.3.2. SPI<a class="headerlink" href="#spi" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Previously SPI_open supported only 5 instances of McSPI(3 MCU instances and 2 Main Instances).
+Now separate APIs are implemented for McSPI and OSPI in order to support all the instances, user needs to use specific APIs as per the peripheral.
+E.g. User should use SPI_open() for McSPI and OSPI_open() for OSPI.</li>
+</ul>
+</div>
+<div class="section" id="freertos">
+<h3>2.3.3.3. FreeRTOS<a class="headerlink" href="#freertos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>On C66x CPU, interrupt router configurations for OS ticks is now handled in the OS_init() by FreeRTOS OSAL layer.
+Previously this configuration was done by application which is no longer needed.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="device-support">
+<h2>2.3.4. Device Support<a class="headerlink" href="#device-support" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">J721S2 GP SR 1.0 (BOARD=j721s2_evm)</p>
+</li>
+<li><p class="first">Associated TIFS versions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">TIFS name</th>
+<th class="head">J721S2 SR revision</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tifs.bin</td>
+<td>SR1.0 GP</td>
+</tr>
+<tr class="row-odd"><td>tifs-hs-enc.bin</td>
+<td>SR1.0 HS</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="section" id="validation-information">
+<h2>2.3.5. Validation Information<a class="headerlink" href="#validation-information" title="Permalink to this headline">¶</a></h2>
+<p>For details on the validated examples refer to the platform specific test report available <a class="reference external" href="../../../test_report">here</a>.</p>
+</div>
+<div class="section" id="tool-chain-information">
+<h2>2.3.6. Tool Chain Information<a class="headerlink" href="#tool-chain-information" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Component</th>
+<th class="head">Version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FreeRTOS Kernel</td>
+<td>10.4.3</td>
+</tr>
+<tr class="row-odd"><td>lwIP stack</td>
+<td>2.1.2</td>
+</tr>
+<tr class="row-even"><td>lwIP-contrib</td>
+<td>2.1.0</td>
+</tr>
+<tr class="row-odd"><td>TI ARM CLANG</td>
+<td>1.3.0.LTS</td>
+</tr>
+<tr class="row-even"><td>PRU code generation tools</td>
+<td>2.3.3</td>
+</tr>
+<tr class="row-odd"><td>GCC ARM code generation tools</td>
+<td>ARCH64 9.2-2019.12</td>
+</tr>
+<tr class="row-even"><td>CGT XML Processing Scripts</td>
+<td>2.61.00</td>
+</tr>
+<tr class="row-odd"><td>System Analyzer (UIA Target)</td>
+<td>2_30_01_02</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="change-request">
+<h2>2.3.7. Change Request<a class="headerlink" href="#change-request" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="56%" />
+<col width="17%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ID</th>
+<th class="head">Head Line</th>
+<th class="head">Original Fix Version</th>
+<th class="head">New Fix Version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fixed-issues">
+<h2>2.3.8. Fixed Issues<a class="headerlink" href="#fixed-issues" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="43%" />
+<col width="8%" />
+<col width="10%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ID</th>
+<th class="head">Head Line</th>
+<th class="head">Module</th>
+<th class="head">Affected Versions</th>
+<th class="head">Affected Platforms</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10770">PDK-11227</a></td>
+<td>UART instances 3-9 does not work on MAIN R5 in interrupt mode</td>
+<td>UART</td>
+<td>08.01.00</td>
+<td>J721E, J7200, J721S2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10766">PDK-11152</a></td>
+<td>SPI driver does not support all instances with SPI_open</td>
+<td>McSPI</td>
+<td>08.02.00</td>
+<td>J721E, J7200, J721S2</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10893">PDK-11559</a></td>
+<td>Timer Frequency is hard coded in OSAL layer</td>
+<td>OSAL</td>
+<td>08.02.00</td>
+<td>J721E, J721S2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10910">PDK-11975</a></td>
+<td>OCMC RAM used by Sciserver FreeRTOS Testapp may cause memory conflict</td>
+<td>SCICLIENT</td>
+<td>08.02.00</td>
+<td>J721E, J7200, J721S2</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10896">PDK-12112</a></td>
+<td>freertos: c7x: _stack array defined in freertos portable layer is of insufficent size</td>
+<td>OSAL</td>
+<td>08.00.00</td>
+<td>J721E, J721S2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10897">PDK-12140</a></td>
+<td>DSS frame freeze detection happens only on 1 video pipe at a time</td>
+<td>DSS</td>
+<td>08.02.00</td>
+<td>J721E, J721S2</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10904">PDK-11133</a></td>
+<td>UDMA DRU Direct TR Example Fails</td>
+<td>UDMA</td>
+<td>08.01.00</td>
+<td>J721S2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10768">PDK-11093</a></td>
+<td>ACK/NACK is send for TISCI messages without AOP flag</td>
+<td>Sciclient</td>
+<td>08.01.00</td>
+<td>J721E, J7200, J721S2</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10898">PDK-10847</a></td>
+<td>UART DMA UT is hanging on mcu1_0/mcu1_1</td>
+<td>UART,UDMA</td>
+<td>08.01.00</td>
+<td>J721S2, J784S4</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10901">PDK-10829</a></td>
+<td>Sciclient UT in Interrupt mode is hanging on C7x cores</td>
+<td>SCICLIENT</td>
+<td>08.01.00</td>
+<td>J721S2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="known-issues">
+<h2>2.3.9. Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="29%" />
+<col width="5%" />
+<col width="7%" />
+<col width="8%" />
+<col width="17%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ID</th>
+<th class="head">Head Line</th>
+<th class="head">Module</th>
+<th class="head">Reported in Release</th>
+<th class="head">Affected Platforms</th>
+<th class="head">Impact</th>
+<th class="head">Workaround in this release</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10316">PDK-8601</a></td>
+<td>CSL ECC test application fails on J7200/J721S2</td>
+<td>CSL</td>
+<td>07.01.00</td>
+<td>J7200, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10891">PDK-11237</a></td>
+<td>CSI-Rx UT hangs when run on mcu2_0</td>
+<td>CSI2RX</td>
+<td>08.02.00</td>
+<td>J721E, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10892">PDK-11854</a></td>
+<td>USART: Spurious DMA Interrupts</td>
+<td>UART</td>
+<td>08.04.00</td>
+<td>J721E, J7200, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10902">PDK-11973</a></td>
+<td>USART: Erroneous clear/trigger of timeout interrupt</td>
+<td>UART</td>
+<td>08.02.00</td>
+<td>J721E, J7200, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10911">PDK-12023</a></td>
+<td>Heap OSAL hangs if previous allocation has buffer overflow</td>
+<td>OSAL</td>
+<td>08.02.00</td>
+<td>J721E, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10909">PDK-12065</a></td>
+<td>[CSIRX]: RAW12 packed output format is not working</td>
+<td>CSI2RX</td>
+<td>08.02.00</td>
+<td>J721E, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10894">PDK-12080</a></td>
+<td>taskFxn parameter is not pointer to function in TaskP_create</td>
+<td>OSAL</td>
+<td>08.02.00</td>
+<td>J721E, J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10890">PDK-12163</a></td>
+<td>[CSIRX]: YUV422-8bit data-type capture not working</td>
+<td>CSIRX</td>
+<td>08.04.00</td>
+<td>J721S2</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://sir.ext.ti.com/jira/browse/EXT_EP-10895">PDK-12165</a></td>
+<td>[J7AEP Build] R5 linker file has duplicate entries for .text.hwi in OCMC RAM and DDR</td>
+<td>COMMON</td>
+<td>08.04.00</td>
+<td>J721S2</td>
+<td>None</td>
+<td>Remove the below HWI memory allocation from linker
+command file build/j721s2/linker_r5_freertos.lds:
+.text.hwi : {} palign(8) &gt; OCMC_RAM</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="limitations">
+<h2>2.3.10. Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pdk">
+<h3>2.3.10.1. PDK<a class="headerlink" href="#pdk" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>PDK examples do not support SMP mode. Some of examples still support build in SMP mode but these binaries are not supported or validated.</li>
+<li>TI Clang compiler does not enable O3 optimization level and Thumb2 mode which were enabled by default with TI ARM CGT compiler. This has an impact on driver throughput. E.g. Ethernet performance has reduced by ~20% on J721S2</li>
+</ul>
+</div>
+<div class="section" id="enet">
+<h3>2.3.10.2. ENET<a class="headerlink" href="#enet" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>lwIP stack integration doesn&#8217;t support checksum hardware-offload feature.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="release_notes_08_00_04.html" class="btn btn-neutral float-right" title="2.4. Release Notes - 08_00_04" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="release_notes_08_05_00.html" class="btn btn-neutral" title="2.2. Release Notes - 08_05_00" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'08_06_01',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>

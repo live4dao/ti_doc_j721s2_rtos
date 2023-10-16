@@ -1,0 +1,24 @@
+Modules
+^^^^^^^
+
+.. toctree::
+    :maxdepth: 1
+
+    ../../modules/csl
+    ../../modules/freertos
+    index_modules_safertos_j721s2
+    ../../modules/osal
+    ../../modules/enet
+    ../../modules/gpio
+    ../../modules/i2c
+    ../../modules/ipc
+    ../../modules/mcasp
+    ../../modules/pm
+    index_modules_sciclient_j721s2
+    ../../modules/spi
+    ../../modules/uart
+    index_modules_udma_j721s2
+    ../../modules/pmic
+    ../../modules/mmcsd
+    ../../modules/dss
+    ../../modules/fvid2

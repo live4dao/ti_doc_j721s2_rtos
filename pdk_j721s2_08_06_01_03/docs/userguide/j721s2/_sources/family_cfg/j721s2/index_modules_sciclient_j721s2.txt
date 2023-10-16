@@ -1,0 +1,7 @@
+.. include:: ../../modules/sciclient/sciclient_common.rst.inc
+
+.. toctree::
+    :maxdepth: 1
+
+    ../../modules/sciclient/irq_sources_j721s2
+    ../../modules/sciclient/irq_dsts_j721s2

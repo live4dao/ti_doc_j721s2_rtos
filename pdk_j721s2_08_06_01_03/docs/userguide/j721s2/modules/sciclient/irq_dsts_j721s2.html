@@ -1,0 +1,724 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.11.7.2. J721S2 Peripheral Interrupt Destination Descriptions &mdash; Platform Development Kit (PDK) - J721S2 User Guide</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Platform Development Kit (PDK) - J721S2 User Guide" href="../../index.html"/>
+        <link rel="up" title="5.11. SCICLIENT" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html"/>
+        <link rel="next" title="5.12. SPI" href="../spi.html"/>
+        <link rel="prev" title="5.11.7.1. J721S2 Peripheral Interrupt Source Descriptions" href="irq_sources_j721s2.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index_j721s2.html" class="icon icon-home"> Platform Development Kit (PDK) - J721S2 User Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                08_06_01
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../family_cfg/j721s2/index_release_notes_j721s2.html">2. Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">3. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ccs_setup_j721s2.html">4. CCS Setup for J721S2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_j721s2.html">5. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../csl.html">5.1. CSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freertos.html">5.2. FreeRTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_safertos_j721s2.html">5.3. SafeRTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../osal.html">5.4. OSAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enet.html">5.5. ENET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpio.html">5.6. GPIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../i2c.html">5.7. I2C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ipc.html">5.8. IPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mcasp.html">5.9. McASP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pm.html">5.10. PM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html">5.11. SCICLIENT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#introduction">5.11.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#build-and-run">5.11.2. Build and Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#system-firmware-logs-parse">5.11.3. System Firmware Logs Parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#sbl-loading-of-applications-sciclient-sciserver-careabouts">5.11.4. SBL loading of applications + Sciclient/Sciserver careabouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#api-descriptions">5.11.5. API descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#board-configuration-passing-between-spl-sbl-and-mcu1-0-applications">5.11.6. Board configuration passing between SPL/SBL and MCU1_0 applications</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html#irq-sources-and-destinations">5.11.7. IRQ Sources and Destinations</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="irq_sources_j721s2.html">5.11.7.1. J721S2 Peripheral Interrupt Source Descriptions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">5.11.7.2. J721S2 Peripheral Interrupt Destination Descriptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spi.html">5.12. SPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uart.html">5.13. UART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../family_cfg/j721s2/index_modules_udma_j721s2.html">5.14. UDMA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pmic.html">5.15. PMIC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mmcsd.html">5.16. MMCSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dss.html">5.17. DSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fvid2.html">5.18. FVID2 User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../family_cfg/j721s2/index_boot_j721s2.html">6. Bootloader (SBL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../family_cfg/j721s2/index_board_j721s2.html">7. Board/EVM Abstraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../family_cfg/j721s2/index_howto_j721s2.html">8. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../family_cfg/j721s2/index_faq_j721s2.html">9. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../family_cfg/j721s2/index_developer_notes_j721s2.html">10. Developer Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index_j721s2.html">Platform Development Kit (PDK) - J721S2 User Guide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index_j721s2.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../family_cfg/j721s2/index_modules_j721s2.html">5. Modules</a> &raquo;</li>
+      
+          <li><a href="../../family_cfg/j721s2/index_modules_sciclient_j721s2.html">5.11. SCICLIENT</a> &raquo;</li>
+      
+    <li>5.11.7.2. J721S2 Peripheral Interrupt Destination Descriptions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="j721s2-peripheral-interrupt-destination-descriptions">
+<h1>5.11.7.2. J721S2 Peripheral Interrupt Destination Descriptions<a class="headerlink" href="#j721s2-peripheral-interrupt-destination-descriptions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>5.11.7.2.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This chapter provides information on processor interrupt destination IDs that
+are permitted in the j721s2 SoC.  The interrupt destination IDs represent inputs
+to SoC processor interrupt controllers or the processors themselves. The System
+Firmware interrupt management TISCI message APIs take interrupt destination IDs
+as input to set and release interrupt routes between source peripherals and
+destination processors.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Resources marked as reserved for use by TIFS <strong>cannot</strong> be assigned to a
+host within the RM Board Configuration resource assignment array.  The RM
+Board Configuration is rejected if an overlap with a reserved resource is
+detected.</p>
+</div>
+</div>
+<div class="section" id="interrupt-destination-ids">
+<span id="pub-soc-j721s2-int-dst-list"></span><h2>5.11.7.2.2. Interrupt Destination IDs<a class="headerlink" href="#interrupt-destination-ids" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="15%" />
+<col width="42%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Destination Device Name</th>
+<th class="head">Destination Device ID</th>
+<th class="head">Interrupt Destination Description</th>
+<th class="head">Interrupt Destination Input Index</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from NAVSS0_INTR_0</td>
+<td>64 to 73</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from NAVSS0_INTR_0</td>
+<td>74 to 127</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from GPIOMUX_INTRTR0</td>
+<td>392 to 447</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from NAVSS0_INTR_0</td>
+<td>448 to 511</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from CMPEVENT_INTRTR0</td>
+<td>544 to 547</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from NAVSS0_INTR_0</td>
+<td>672 to 727</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from NAVSS0_INTR_0</td>
+<td>728 to 735</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC</td>
+<td>14</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_CLEC inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>960 to 975</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from NAVSS0_INTR_0</td>
+<td>64 to 73</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from NAVSS0_INTR_0</td>
+<td>74 to 127</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from GPIOMUX_INTRTR0</td>
+<td>392 to 447</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from NAVSS0_INTR_0</td>
+<td>448 to 511</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from CMPEVENT_INTRTR0</td>
+<td>544 to 547</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from NAVSS0_INTR_0</td>
+<td>672 to 727</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from NAVSS0_INTR_0</td>
+<td>728 to 735</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS</td>
+<td>26</td>
+<td>J721S2_DEV_COMPUTE_CLUSTER0_GIC500SS inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>960 to 975</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_CPSW1</td>
+<td>28</td>
+<td>J721S2_DEV_CPSW1 inputs from TIMESYNC_INTRTR0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_CPSW0</td>
+<td>29</td>
+<td>J721S2_DEV_MCU_CPSW0 inputs from TIMESYNC_INTRTR0</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_ESM0</td>
+<td>103</td>
+<td>J721S2_DEV_ESM0 inputs from GPIOMUX_INTRTR0</td>
+<td>664 to 671</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_ESM0</td>
+<td>103</td>
+<td>J721S2_DEV_ESM0 inputs from GPIOMUX_INTRTR0</td>
+<td>672 to 679</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_ESM0</td>
+<td>103</td>
+<td>J721S2_DEV_ESM0 inputs from GPIOMUX_INTRTR0</td>
+<td>680 to 687</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_WKUP_ESM0</td>
+<td>104</td>
+<td>J721S2_DEV_WKUP_ESM0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>120 to 127</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_WKUP_ESM0</td>
+<td>104</td>
+<td>J721S2_DEV_WKUP_ESM0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>128 to 135</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_WKUP_ESM0</td>
+<td>104</td>
+<td>J721S2_DEV_WKUP_ESM0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>136 to 143</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>3</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>5</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_NAVSS0</td>
+<td>224</td>
+<td>J721S2_DEV_NAVSS0 inputs from TIMESYNC_INTRTR0</td>
+<td>6</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_NAVSS0_UDMASS_INTA_0</td>
+<td>265</td>
+<td>J721S2_DEV_NAVSS0_UDMASS_INTA_0 inputs from TIMESYNC_INTRTR0</td>
+<td>100 to 107</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_NAVSS0_UDMASS_INTA_0</td>
+<td>265</td>
+<td>J721S2_DEV_NAVSS0_UDMASS_INTA_0 inputs from CMPEVENT_INTRTR0</td>
+<td>108 to 111</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_NAVSS0_UDMASS_INTA_0</td>
+<td>265</td>
+<td>J721S2_DEV_NAVSS0_UDMASS_INTA_0 inputs from GPIOMUX_INTRTR0</td>
+<td>116 to 131</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_NAVSS0_UDMASS_INTA_0</td>
+<td>275</td>
+<td>J721S2_DEV_MCU_NAVSS0_UDMASS_INTA_0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>4 to 11</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS0_CORE0</td>
+<td>279</td>
+<td>J721S2_DEV_R5FSS0_CORE0 inputs from GPIOMUX_INTRTR0</td>
+<td>176 to 191</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS0_CORE0
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>279</td>
+<td>J721S2_DEV_R5FSS0_CORE0 inputs from NAVSS0_INTR_0</td>
+<td>224 to 227</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS0_CORE0</td>
+<td>279</td>
+<td>J721S2_DEV_R5FSS0_CORE0 inputs from NAVSS0_INTR_0</td>
+<td>228 to 255</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS0_CORE0</td>
+<td>279</td>
+<td>J721S2_DEV_R5FSS0_CORE0 inputs from CMPEVENT_INTRTR0</td>
+<td>326 to 329</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS0_CORE0</td>
+<td>279</td>
+<td>J721S2_DEV_R5FSS0_CORE0 inputs from GPIOMUX_INTRTR0</td>
+<td>396 to 411</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS0_CORE0</td>
+<td>279</td>
+<td>J721S2_DEV_R5FSS0_CORE0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>488 to 503</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS0_CORE1</td>
+<td>280</td>
+<td>J721S2_DEV_R5FSS0_CORE1 inputs from GPIOMUX_INTRTR0</td>
+<td>176 to 191</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS0_CORE1
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>280</td>
+<td>J721S2_DEV_R5FSS0_CORE1 inputs from NAVSS0_INTR_0</td>
+<td>224 to 227</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS0_CORE1</td>
+<td>280</td>
+<td>J721S2_DEV_R5FSS0_CORE1 inputs from NAVSS0_INTR_0</td>
+<td>228 to 255</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS0_CORE1</td>
+<td>280</td>
+<td>J721S2_DEV_R5FSS0_CORE1 inputs from CMPEVENT_INTRTR0</td>
+<td>326 to 329</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS0_CORE1</td>
+<td>280</td>
+<td>J721S2_DEV_R5FSS0_CORE1 inputs from GPIOMUX_INTRTR0</td>
+<td>396 to 411</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS0_CORE1</td>
+<td>280</td>
+<td>J721S2_DEV_R5FSS0_CORE1 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>488 to 503</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS1_CORE0</td>
+<td>281</td>
+<td>J721S2_DEV_R5FSS1_CORE0 inputs from GPIOMUX_INTRTR0</td>
+<td>176 to 191</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS1_CORE0
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>281</td>
+<td>J721S2_DEV_R5FSS1_CORE0 inputs from NAVSS0_INTR_0</td>
+<td>224 to 227</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS1_CORE0</td>
+<td>281</td>
+<td>J721S2_DEV_R5FSS1_CORE0 inputs from NAVSS0_INTR_0</td>
+<td>228 to 255</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS1_CORE0</td>
+<td>281</td>
+<td>J721S2_DEV_R5FSS1_CORE0 inputs from CMPEVENT_INTRTR0</td>
+<td>326 to 329</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS1_CORE0</td>
+<td>281</td>
+<td>J721S2_DEV_R5FSS1_CORE0 inputs from GPIOMUX_INTRTR0</td>
+<td>396 to 411</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS1_CORE0</td>
+<td>281</td>
+<td>J721S2_DEV_R5FSS1_CORE0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>488 to 503</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS1_CORE1</td>
+<td>282</td>
+<td>J721S2_DEV_R5FSS1_CORE1 inputs from GPIOMUX_INTRTR0</td>
+<td>176 to 191</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS1_CORE1
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>282</td>
+<td>J721S2_DEV_R5FSS1_CORE1 inputs from NAVSS0_INTR_0</td>
+<td>224 to 227</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS1_CORE1</td>
+<td>282</td>
+<td>J721S2_DEV_R5FSS1_CORE1 inputs from NAVSS0_INTR_0</td>
+<td>228 to 255</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS1_CORE1</td>
+<td>282</td>
+<td>J721S2_DEV_R5FSS1_CORE1 inputs from CMPEVENT_INTRTR0</td>
+<td>326 to 329</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_R5FSS1_CORE1</td>
+<td>282</td>
+<td>J721S2_DEV_R5FSS1_CORE1 inputs from GPIOMUX_INTRTR0</td>
+<td>396 to 411</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_R5FSS1_CORE1</td>
+<td>282</td>
+<td>J721S2_DEV_R5FSS1_CORE1 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>488 to 503</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_R5FSS0_CORE0
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>284</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE0 inputs from MCU_NAVSS0_INTR_ROUTER_0</td>
+<td>64 to 75</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_R5FSS0_CORE0</td>
+<td>284</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE0 inputs from MCU_NAVSS0_INTR_ROUTER_0</td>
+<td>76 to 87</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_R5FSS0_CORE0</td>
+<td>284</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>124 to 139</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_R5FSS0_CORE0</td>
+<td>284</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE0 inputs from MAIN2MCU_LVL_INTRTR0</td>
+<td>160 to 223</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_R5FSS0_CORE0</td>
+<td>284</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE0 inputs from MAIN2MCU_PLS_INTRTR0</td>
+<td>224 to 271</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_R5FSS0_CORE0</td>
+<td>284</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE0 inputs from NAVSS0_INTR_0</td>
+<td>376 to 383</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_R5FSS0_CORE1
+(<strong>Reserved by System Firmware</strong>)</td>
+<td>285</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE1 inputs from MCU_NAVSS0_INTR_ROUTER_0</td>
+<td>64 to 67</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_R5FSS0_CORE1</td>
+<td>285</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE1 inputs from MCU_NAVSS0_INTR_ROUTER_0</td>
+<td>68 to 87</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_R5FSS0_CORE1</td>
+<td>285</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE1 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>124 to 139</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_R5FSS0_CORE1</td>
+<td>285</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE1 inputs from MAIN2MCU_LVL_INTRTR0</td>
+<td>160 to 223</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_MCU_R5FSS0_CORE1</td>
+<td>285</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE1 inputs from MAIN2MCU_PLS_INTRTR0</td>
+<td>224 to 271</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_MCU_R5FSS0_CORE1</td>
+<td>285</td>
+<td>J721S2_DEV_MCU_R5FSS0_CORE1 inputs from NAVSS0_INTR_0</td>
+<td>376 to 383</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_WKUP_HSM0</td>
+<td>304</td>
+<td>J721S2_DEV_WKUP_HSM0 inputs from MCU_NAVSS0_INTR_ROUTER_0</td>
+<td>48 to 63</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_WKUP_HSM0</td>
+<td>304</td>
+<td>J721S2_DEV_WKUP_HSM0 inputs from MAIN2MCU_LVL_INTRTR0</td>
+<td>64 to 71</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_WKUP_HSM0</td>
+<td>304</td>
+<td>J721S2_DEV_WKUP_HSM0 inputs from MAIN2MCU_PLS_INTRTR0</td>
+<td>72 to 79</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_WKUP_HSM0</td>
+<td>304</td>
+<td>J721S2_DEV_WKUP_HSM0 inputs from WKUP_GPIOMUX_INTRTR0</td>
+<td>184 to 195</td>
+</tr>
+<tr class="row-odd"><td>J721S2_DEV_VUSR_DUAL0</td>
+<td>362</td>
+<td>J721S2_DEV_VUSR_DUAL0 inputs from NAVSS0_INTR_0</td>
+<td>0 to 31</td>
+</tr>
+<tr class="row-even"><td>J721S2_DEV_VUSR_DUAL0</td>
+<td>362</td>
+<td>J721S2_DEV_VUSR_DUAL0 inputs from NAVSS0_INTR_0</td>
+<td>32 to 63</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../spi.html" class="btn btn-neutral float-right" title="5.12. SPI" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="irq_sources_j721s2.html" class="btn btn-neutral" title="5.11.7.1. J721S2 Peripheral Interrupt Source Descriptions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'08_06_01',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>
